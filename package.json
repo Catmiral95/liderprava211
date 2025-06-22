@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "ajax": "^0.0.4",
-    "ajax-for-node": "^1.0.12",
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0",
-    "request": "^2.88.2"
-  }
-}
