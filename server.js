@@ -9,24 +9,24 @@ const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(express.urlencoded());
-//app.use("/", express.static("/data/www/liderpravapfo.ru/public"));
+app.use("/", express.static("/data/www/liderpravapfo.ru"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const urlencodedParser = express.urlencoded({ extended: false });
 
 app.get("/", function staticFile(_, response) {
-  response.sendFile(__dirname + "/data/www/liderpravapfo.ru/public/index.html");
+  response.sendFile(__dirname + "/data/www/liderpravapfo.ru/index.html");
 });
 
 app.get("/", function staticFile(_, response) {
   response.sendFile(
-    __dirname + "/data/www/liderpravapfo.ru/public/agreement.html"
+    __dirname + "/data/www/liderpravapfo.ru/agreement.html"
   );
 });
 
 app.get("/", function staticFile(_, response) {
   response.sendFile(
-    __dirname + "/data/www/liderpravapfo.ru/public/confidence.html"
+    __dirname + "/data/www/liderpravapfo.ru/confidence.html"
   );
 });
 
