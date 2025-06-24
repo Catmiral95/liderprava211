@@ -9,22 +9,22 @@ const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(express.urlencoded());
-//app.use(express.static("./public"));
+app.use(express.static("./public", { fallthrough: false }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const urlencodedParser = express.urlencoded({ extended: false });
 
-app.get("/", function(_, response) {
+app.get("/", function staticFile(_, response) {
   response.sendFile(__dirname + "/data/www/liderpravapfo.ru/public/index.html");
 });
 
-app.get("/", function(_, response) {
+app.get("/", function staticFile(_, response) {
   response.sendFile(
     __dirname + "/data/www/liderpravapfo.ru/public/agreement.html"
   );
 });
 
-app.get("/", function(_, response) {
+app.get("/", function staticFile(_, response) {
   response.sendFile(
     __dirname + "/data/www/liderpravapfo.ru/public/confidence.html"
   );
