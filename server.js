@@ -15,18 +15,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const urlencodedParser = express.urlencoded({ extended: false });
 
 app.get("/", function(_, response) {
-  response.sendFile(__dirname + "/public/index.html");
+  response.sendFile(__dirname + "/data/www/liderpravapfo.ru/public/index.html");
 });
 
 app.get("/", function(_, response) {
   response.sendFile(
-    __dirname + "/public/agreement.html"
+    __dirname + "/data/www/liderpravapfo.ru/public/agreement.html"
   );
 });
 
 app.get("/", function(_, response) {
   response.sendFile(
-    __dirname + "/public/confidence.html"
+    __dirname + "/data/www/liderpravapfo.ru/public/confidence.html"
   );
 });
 
