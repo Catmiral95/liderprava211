@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.static("/data/www/liderpravapfo.ru/public", { fallthrough: false }));
+app.use(express.static("/data/www/liderpravapfo.ru/public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const urlencodedParser = express.urlencoded({ extended: false });
