@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лидер Права</title>
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/animate.css">
+</head> 
+
+
+<body class="body">
+  
+  <header class="header" id="header">
+    <div class="navbar container-fluid">
+      <a class="logo-link" href="https://lider-prava.ru">
+          <img class="logo" src="/img/logo.png" alt="Logo">
+          </a>
+          <input type="checkbox" id="check"> 
+          <label for="check" class="icons">
+             <i class="toggler"> 
+              <img class="burger" src="/img/menu-burger.svg" width="45px" >
+          </i>
+          <i class="close">
+            <img class="cross" src="/img/close.svg" width="50px">
+          </i>
+          </label>
+
+    <div class="nav-block">
+      <li class="nav-item">
+          <a class="nav-link" href="#intro">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Услуги</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cases">Кейсы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#our-contacts">Контакты</a>
+        </li>
+    </div>
+
+    <div class="telephone">
+      <img src="img/phone-solid.svg" alt="Logo" width="25px">
+      <a class="nav-number" href="tel:+7 961 346 70 77">+7 961 346 70 77</a>
+      </div>
+    </div>
+  </header>
+
+
+    <main class="main" id="main">
+      
+      <div class="main-wrapper">
+          <h2 class="main-top">Юридическая компания</h2>
+          <h1 class="main-title">ЛИДЕР ПРАВА</h1>         
+          <h2 class="maintext">
+           <!-- <div class="down-arrow1">⬇</div>  -->
+            <img src="img/arr-down.svg" width="20px">
+             <div class="main-text"> СВЯЖИТЕСЬ С НАМИ ДЛЯ БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ </div> 
+             <!-- <div class="down-arrow2">⬇</div> -->
+            <img src="img/arr-down.svg" width="20px">
+          </h2>
+          <button class="btn" id="btn" href="#!">КОНСУЛЬТАЦИЯ</button>
+        </div>
+      <div class="icon-container">
+        <a class="brand-icon" target="_blank" href="https://vk.com/liderprava21">
+          <img class="main-img" src="img/vk-brands-solid.svg" alt="Logo" width="40px"></a>
+          <a class="brand-icon" target="_blank" href="https://api.whatsapp.com/send/?phone=79603128406&text=Здравствуйте%21%0A%0AПишу+из+приложения+2ГИС.%0A%0A&type=phone_number&app_absent=0">
+            <img class="main-img" src="img/whatsapp.svg" alt="Logo" width="40px"></a>
+          <a class="brand-icon" target="_blank" href="https://t.me/liderpravacheb">
+            <img class="main-img" src="img/telegram-brands-solid.svg" alt="Logo" width="40px"></a>
+            <a class="brand-icon" target="_blank" href="tel:+7 961 346 70 77">
+              <img class="main-img" src="img/phone-solid.svg" alt="Logo" width="40px"></a>
+              <a class="brand-icon" target="_blank" href="mailto:liderprava21@ya.ru">
+                <img class="main-img" src="img/envelope-solid.svg" alt="Logo" width="40px"></a>
+      </div>
+    
+         <div class="pop-up" id="pop-up">
+          <div class="pop-up-container">
+              <div class="pop-up-body" id="pop-up-body">
+                <div class="pop-up-close" id="pop-up-close">✖</div>
+                     <form onsubmit="localStorage.setItem('formStartTime', Date.now())" id = "form" class="popup-form" action="/form" method="post" enctype="application/x-www-form-urlencoded">
+                    <input type="text" name="name" id="name" class="text" maxlength="50" placeholder="Имя">
+                    <input type="tel" name="number" id="number" class="text" placeholder="Телефон" required>
+                    <input type="email" name="email" id="email" class="text" maxlength="50" placeholder="E-mail">
+                    <input type="text" name="username" style="display: none" tabindex="-1" autocomplete="off">
+                    <select type="text" name="theme" id="theme" class="text" placeholder="Выберите тему обращения">
+                      <option class="option" value="--Выберите тему обращения--">--Выберите тему обращения--</option>
+                      <option value="Записаться на приём">Записаться на приём</option>
+                      <option value="Юридическая консультация">Юридическая консультация</option>
+                      <option value="Сопровождение сделки">Сопровождение сделки</option>
+                      <option value="Оформление претензии">Оформление претензии</option>
+                      <option value="Представительство в суде">Представительство в суде</option>
+                      <option value="Услуги адвоката">Другое</option>
+                    </select>
+                    <textarea type="text" name="details" id="details" class="details" maxlength="1000" placeholder="Опишите вашу ситуацию"></textarea>
+                    <div class="info">
+                  <label for="info">Дополнительная информация</label>
+                  <input type="text" id="info" name="info">
+                  </div>  
+                    <li class="policy" id="policy">Нажимая кнопку, я подтверждаю, что ознакомлен(а) и принимаю условия <a class="conf-pol" target="_blank" href="pages/confidence.html">Политики Конфиденциальности</a> и соглашаюсь на <a class="conf-pol" target="_blank" href="pages/agreement.html">обработку персональных данных</a></li>                 
+                    <button type="submit" name="submit" class="submit" id="submit" value="send" onclick="message()">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    </form>
+                      <div class="message">
+                        <div class="success" id="success">
+                        ✅ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                        </div>
+                        <danger class="danger" id="danger">❗ Поля не должны быть пустыми</danger>
+                      
+                </div>
+              </div>
+          </div>
+          </div>
+   </main>
+     
+ 
+
+
+<!-- О НАС -->
+
+<div class="intro" id="intro"> 
+  <h1 class="intro-title">О НАШЕЙ КОМПАНИИ</h1>
+  <p class="about wow fadeIn">Наша позиция это честность и открытость юридических услуг</p>
+                  
+    
+          <div class="info-blocks container-fluid justify-content-around">
+              
+                  
+      
+    <div class="info-block wow fadeInLeft">
+    <div class="info-block-icon">
+         <img src="img/landmark-solid.svg" class="info-logo" alt="Logo" width="50px">
+   </div>
+    <div class="info-block-content">
+   <h5 class="info-block-title">
+   <span>7 лет в профессии</span>
+  </h5>
+  <p class="info-block-description">
+  Наши юристы имеют обширный опыт и высокую компетенцию в сферах специализации, которые гарантируют желаемый результат. 
+  </p>
+  </div>
+  </div> 
+  
+    
+  
+  <div class="info-block wow fadeInLeft">
+      <div class="info-block-icon" >
+           <img src="img/handshake-solid.svg" class="info-logo" alt="Logo" width="70px">
+     </div>
+      <div class="info-block-content">
+     <h5 class="info-block-title">
+     <span>Гибкость и отзывчивость</span>
+    </h5>
+    <p class="info-block-description">
+      Предоставляем полный набор юридических услуг по всей Росиии. Ценим каждого клиента и стремимся сделать сотрудничество с нами комфортным и продуктивным.      
+    </p>
+                    </div>
+                    </div> 
+  
+    
+  
+  <div class="info-block wow fadeInLeft">
+      <div class="info-block-icon">
+           <img src="img/briefcase-solid.svg" class="info-logo" alt="Logo" width="50px">
+     </div>
+      <div class="info-block-content">
+     <h5 class="info-block-title">
+     <span>Наши главные качества</span>
+    </h5>
+    <p class="info-block-description">
+     Профессиональная слаженность, клиентоориентированность, лояльная ценовая политика, честная и безупречная деловая репутация.</p>
+                    </div>
+                    </div>
+                      </div>   
+        <div class="pages container-fluid">
+          <li class="page-title">Подпишитесь и узнавайте больше о нас в соцсетях :</li>
+          <div class="icon-about">
+            <a class="brand-icon" target="_blank" href="https://vk.com/liderprava21">
+              <img src="img/vklogo.svg" alt="Logo" width="32px"></a>
+              <a class="brand-icon" target="_blank" href="https://web.telegram.org/k/#@liderprava21">
+                <img src="img/telega.svg" alt="Logo" width="31px"></a>
+                  <a class="brand-icon" target="_blank" href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Flider_prava%2F&is_from_rle">
+                    <img src="img/inst.svg" alt="Logo" width="35px"></a>
+          </div>
+        </div> 
+   </div>
+<!-- УСЛУГИ -->
+
+<div class="service" id="service">
+  <h1 class="serv-title" id="serv-title">МЫ ПРЕДОСТАВЛЯЕМ ПОЛНЫЙ СПЕКТР ЮРИДИЧЕСКИХ УСЛУГ И ГАРАНТИРУЕМ РЕЗУЛЬТАТ. КОНСУЛЬТАЦИЯ БЕСПЛАТНА.</h1>
+  <!-- *TODO 6 БЛОКОВ УСЛУГ     -->
+
+<div class="serv-blocks container-fluid">
+
+
+<div class="blocks-top wow fadeInLeftBig">
+      
+<div class="serv-block col-md-4 wow fadeInLeftBig">
+              <h5 class="serv-block-title">
+                  <span>Защита прав потребителей</span>
+              </h5>
+              <ul class="serv-block-description">
+              <li>Возврат и обмен товара;</li>
+              <li>Взыскание неустойки и компенсации;</li>
+              <li>Возмещения вреда здоровью или имуществу;</li>
+              <li>Компенсация морального и материального ущерба</li>
+          </ul> 
+          <button class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+        </div>
+          
+  <div class="serv-block col-md-4 wow fadeInLeftBig">
+      <h5 class="serv-block-title">
+          <span>Автоинциденты</span>
+      </h5>
+      <ul class="serv-block-description">
+          <li>Проведение независимой экспертизы;</li>
+          <li>Принуждение виновника ДТП к возмещению ущерба;</li>
+          <li>Обжалование протоколов и постановлений ГИБДД;</li>
+          <li>Сохранение водительских прав</li>
+              </ul> 
+              <button  class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+  </div>
+
+
+<div class="serv-block col-md-4 wow fadeInLeftBig">
+  <h5 class="serv-block-title">
+      <span>Страховые споры</span>
+  </h5>
+  <ul class="serv-block-description">
+      <li>Отказ или задержка выплат со стороны страховщика;</li>
+      <li>Занижение компенсационных выплат страховщиком;</li>
+      <li>Споры о наступлении страхового случая;</li>
+      <li>Нарушение сроков страховщиком</li>
+      </ul> 
+  <button  class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+  </div>
+  
+</div>         
+  
+      
+      
+<div class="blocks-bottom wow fadeInRightBig">
+<div class="serv-block col-md-4">
+  <h5 class="serv-block-title">
+      <span>Банкротство физических лиц</span>
+  </h5>
+  <ul class="serv-block-description">
+      <li>Процедура банкротства под ключ;</li>
+      <li>Защита от коллекторов и приставов;</li>
+      <li>Представительство в суде в любой точке страны;</li>
+      <li>Удобная рассрочка</li>
+      </ul> 
+      <button  class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+  </div>
+
+<div class="serv-block col-md-4">
+  <h5 class="serv-block-title">
+      <span>Трудовые споры</span>
+  </h5>
+  <ul class="serv-block-description">
+      <li>Индивидуальные и коллективные трудовые споры;</li>
+      <li>Споры об выплатах денежных компенсаций и возмещении убытков;</li>
+      <li>Споры об использовании норм ТК</li>
+      </ul> 
+      <button  class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+  </div>
+
+
+<div class="serv-block col-md-4">
+  <h5 class="serv-block-title">
+      <span>Медицинские споры</span>
+  </h5>
+  <ul class="serv-block-description">
+              <li>Споры о качестве медицинской помощи;</li>
+              <li>Споры о медицинской страховке;</li>
+              <li>Споры о согласии на лечение;</li>
+              <li>Споры о цене и оплате медицинских услуг</li>          
+          </ul>
+          <button  class="btn" href="#!" id="open-pop-up">УЗНАТЬ ПОДРОБНЕЕ ⇲</button> 
+  </div>
+</div> 
+          </div>
+          
+      
+
+<!-- СЛАЙДЕР -->
+
+<div class-="serv-slider" id="serv-slider">
+    <!-- <div class="carousels "> -->
+    <div id="carouselExampleIndicators" class="carousel slide container-fluid">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="serv-block-carousel">
+                            <h5 class="serv-block-title-carousel">
+                                <span>Защита прав потребителей</span>
+                            </h5>
+                            <ul class="serv-block-description-carousel">
+                            <li>Возврат и обмен товара;</li>
+                            <li>Взыскание неустойки и компенсации;</li>
+                            <li>Возмещения вреда здоровью или имуществу;</li>
+                            <li>Компенсация морального и материального ущерба</li>
+                        </ul> 
+                        <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                      </div>
+          </div>
+          <div class="carousel-item">
+            <div class="serv-block-carousel">
+              <h5 class="serv-block-title-carousel">
+                  <span>Автоинциденты</span>
+              </h5>
+              <ul class="serv-block-description-carousel">
+                  <li>Проведение независимой экспертизы;</li>
+                  <li>Принуждение виновника ДТП к возмещению ущерба;</li>
+                  <li>Обжалование протоколов и постановлений ГИБДД;</li>
+                  <li>Сохранение водительских прав</li>
+                      </ul> 
+                      <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                    </div>
+                  </div> 
+          <div class="carousel-item">
+            <div class="serv-block-carousel">
+              <h5 class="serv-block-title-carousel">
+                  <span>Страховые споры</span>
+              </h5>
+              <ul class="serv-block-description-carousel">
+                  <li>Отказ или задержка выплат со стороны страховщика;</li>
+                  <li>Занижение компенсационных выплат страховщиком;</li>
+                  <li>Споры о наступлении страхового случая;</li>
+                  <li>Нарушение сроков страховщиком</li>
+                  </ul> 
+              <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                </div>
+            </div>      
+            <div class="carousel-item">
+              <div class="serv-block-carousel">
+                <h5 class="serv-block-title-carousel">
+                    <span>Банкротство физических лиц</span>
+                </h5>
+                <ul class="serv-block-description-carousel">
+                    <li>Процедура банкротства под ключ;</li>
+                    <li>Защита от коллекторов и приставов;</li>
+                    <li>Представительство в суде в любой точке страны;</li>
+                    <li>Удобная рассрочка</li>
+                    </ul> 
+                <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                  </div>
+              </div>      
+              
+              <div class="carousel-item">
+                <div class="serv-block-carousel">
+                  <h5 class="serv-block-title-carousel">
+                      <span>Трудовые споры</span>
+                  </h5>
+                  <ul class="serv-block-description-carousel">
+                      <li>Индивидуальные и коллективные трудовые споры;</li>
+                      <li>Споры об выплатах денежных компенсаций и возмещении убытков;</li>
+                      <li>Споры об использовании норм ТК</li>
+                      </ul> 
+                  <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                    </div>
+                </div>      
+               
+                <div class="carousel-item">
+                  <div class="serv-block-carousel">
+                    <h5 class="serv-block-title-carousel">
+                        <span>Медицинские споры</span>
+                    </h5>
+                    <ul class="serv-block-description-carousel">
+                      <li>Споры о качестве медицинской помощи;</li>
+                      <li>Споры о медицинской страховке;</li>
+                      <li>Споры о согласии на лечение;</li>
+                      <li>Споры о цене и оплате медицинских услуг</li>
+                        </ul> 
+                    <button class="btn" id="carousel-more">УЗНАТЬ ПОДРОБНЕЕ ⇲</button>
+                      </div>
+                  </div>      
+                </div>
+                
+                    
+          
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+      </div> 
+      </div>
+
+
+<!-- КЕЙСЫ -->
+
+<div class="cases" id="cases">
+  <h1 class="case-title" id="case-title">НАШИ УСПЕШНЫЕ КЕЙСЫ</h1>
+  
+  <div class="case container-fluid wow fadeIn animate__slow" id="case">
+
+    <!-- Кнопки для открытия popup -->
+    <div class="case-block" id="case-block" data-popup="popup1">
+         <img class="case-img" src="/img/house.png">
+      <h1 class="case-name" id="case-name">Дело №1</h1>
+    </div>
+    <div class="case-block" id="case-block" data-popup="popup2">
+         <img class="case-img" src="/img/justice.png">
+      <h1 class="case-name" id="case-name">Дело №2</h1>
+    </div>
+    <div class="case-block" id="case-block" data-popup="popup3">
+         <img class="case-img" src="/img/accident.png">
+      <h1 class="case-name" id="case-name">Дело №3</h1>
+    </div>
+    <div class="case-block" id="case-block" data-popup="popup4">
+         <img class="case-img" src="/img/judgement.png">
+      <h1 class="case-name" id="case-name">Дело №4</h1>
+    </div>
+</div>
+</div>
+
+<!-- Popup контейнеры -->
+<div class="case-popup" id="popup1">
+    <div class="case-popup-container">
+    <div class="popup-body1 container-fluid" id="popup-body1">
+      <div class="case-popup-body-content container">
+        <div class="case-popup-close" id="case-popup-close">✖</div> 
+        <div class="case-popup-text" id="case-popup-text">
+        <p>
+       <h2 class="case-popup-title" id="case-popup-title">Дело №1</h2>
+      <b>Суть дела:</b>
+      <span>Клиент заключил договор подряда со строительной организацией на строительство индивидуального жилого дома. Однако, ни на одном из этапов строительные работы не были выполнены в полном объёме.</span>
+      </p>
+      <p>
+      <span>С целью мирного урегулирования возникшей спорной ситуации Нами дважды в адрес строительной организации направлялись претензии с предложением расторгнуть договор подряда на строительство индивидуального жилого дома и возвратить уплаченные по договору денежные средства. Однако, все претензии были оставлены без ответа. По итогу, с целью защиты прав Клиента, Нами было составлено и направлено в суд исковое заявление.</span>
+      </p>
+      <p>
+      <b>Результат:</b>
+      <span>Решением Ленинского районного суда г. Чебоксары Чувашской Республики (Гражданское дело № 2-1253/2025) заявленные требования в размере 16 140 037 рублей удовлетворены в полном объёме, а именно в пользу Клиента взыскано:</span>
+     <li>5 353 300 рублей – сумма, уплаченная по договору подряда на строительство индивидуального жилого дома; </li>
+      <li>5 353 300 рублей - неустойка за нарушение сроков передачи объекта;</li>
+      <li>5 358 300 рублей - штраф за несоблюдение в добровольном порядке удовлетворения требований потребителя (согласно п.6 ст.13 Закона о защите прав потребителей);</li>
+      <li>10 000 рублей - компенсация морального вреда.</li>
+      <span>На сегодняшний день, решение вступило в законную силу.</span>
+      </p>
+      </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+<div class="case-popup" id="popup2">
+  <div class="case-popup-container">
+    <div class="popup-body2 container-fluid">
+            <div class="case-popup-body-content container">
+        <div class="case-popup-close" id="case-popup-close">✖</div> 
+        <div class="case-popup-text">
+            <p>
+        <h2 class="case-popup-title" id="case-popup-title">Дело №2</h2>
+            <b>Суть дела:</b>
+            <span>На территории Чувашской Республики произошёл несчастный случай на железнодорожных путях: смертельно травмирована женщина в результате столкновения с грузовым поездом. У погибшей остались муж и несовершеннолетние дети, которым данным инцидентом причинены глубокие моральные и нравственные страдания. Согласно нормам действующего законодательства железнодорожный транспорт является источником повышенной опасности и лицо, несущее ответственность за причинение вреда источником повышенной опасности, - его собственник. В данном случае - это  ОАО «Российские железные дороги», и именно к нему близкие родственники, при нашей поддержке, обратились с исковым заявлением о взыскании компенсации морального вреда в связи со смертью жены и матери. На протяжении всего судебного процесса мы оказывали им юридическую поддержку, представляли их интересы в зале судебных заседаний.</span>
+            </p>
+          <p>
+            <b>Результат:</b>
+            <span>Решением Урмарского районного суда Чувашской Республики (Гражданское дело 2-248/2023) исковые требования удовлетворены: с ОАО «Российские железные дороги» в пользу Истцов взысканы: 
+              <li>в пользу каждого из несовершеннолетнего ребенка - ежемесячные выплаты в счет возмещения вреда по потере кормильца в размере 4210 руб. 92 коп., начиная с 03.06.2023 года с последующей индексацией до достижения 18 лет, а в случае дальнейшего обучения по очной форме - до получения образования по очной форме, но не более чем до 23 лет;</li>
+              <li>в пользу каждого из несовершеннолетнего ребёнка - единовременно задолженность по ежемесячным платежам по потере кормильца за период с 03.06.2020 г. по 02.06.2023 г. в размере 151593 руб. 12 коп.;</li>
+              <li>в пользу каждого из несовершеннолетнего ребёнка - компенсация морального вреда в связи с гибелью матери в сумме 100 000 руб.; </li>
+              <li>в пользу мужа - компенсация морального вреда в связи с гибелью жены в сумме 20000 руб.</li>
+            </span>
+          </p>
+          <p>
+            <b>По состоянию на сегодняшний день:</b>
+            <span>Ответчиком компенсация морального вреда и единовременная задолженность по ежемесячным платежам возмещена в полном объеме,  ежемесячные выплаты по потере кормильца - осуществляются в срок.</span>
+          </p>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="case-popup" id="popup3">
+    <div class="case-popup-container">
+    <div class="popup-body3 container-fluid">
+            <div class="case-popup-body-content container">
+        <div class="case-popup-close" id="case-popup-close">✖</div> 
+        <div class="case-popup-text">
+            <p>
+        <h2 class="case-popup-title" id="case-popup-title">Дело №3</h2>
+        <b>Суть дела:</b>
+        <span>На территории Московской области произошло дорожно-транспортное происшествие со смертельным исходом. У погибшего остались родственники, которые в связи с утратой близкого родственника испытывают глубокие моральные и нравственные страдания.</span>
+        <span>К лицу, признаным виновным в ДТП, сестра и отец погибшего обратились с заявлением о взыскании компенсации морального вреда. Со своей стороны мы оказали им активное содействие при подготовке искового заявления, сопровождали на протяжении всего судебного разбирательства.</span>
+        <span>Не согласившись с Решением суда первой инстанции, Нами была подана апелляционная жалоба, и решение было отменено с вынесением нового решения.</span>
+            </p>
+            <p>
+              <b>Результат:</b>
+        <span>Апелляционным определением судебной коллегии по гражданским делам Московского областного суда от 24 января 2024 г., оставленным без изменения Определением Первого кассационного суда общей юрисдикции от 27.05.2024, с водителей - участников ДТП взысканы:</span>
+        <li>Апелляционным определением судебной коллегии по гражданским делам Московского областного суда от 24 января 2024 г., оставленным без изменения Определением Первого кассационного суда общей юрисдикции от 27.05.2024, с водителей - участников ДТП взысканы:</li>
+        <li>В пользу отца - в счет компенсации морального вреда денежные средства в размере 500 000 рублей.</li>
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="case-popup" id="popup4">
+      <div class="case-popup-container">
+    <div class="popup-body4 container-fluid">
+            <div class="case-popup-body-content container">
+        <div class="case-popup-close" id="case-popup-close">✖</div> 
+        <div class="case-popup-text">
+            <p>
+        <h2 class="case-popup-title" id="case-popup-title">Дело №4</h2>
+          <b>Суть дела:</b>
+          <span>При выполнении полевых работ произошёл несчастный случай на производстве: трактор с прицепной сеялкой при выполнении посевных работ совершил наезд на пострадавшего, который в результате полученных травм скончался в медицинской организации. У погибшего осталась семья - жена и двое детей, один из которых несовершеннолетний. Близкие погибшего перенесли сильнейший стресс и продолжают испытывать глубокие нравственные страдания.</span>
+          <span>С целью компенсации морального вреда, семья обратилась с исковыми заявлениями к работодателю, так как согласно действующему законодательству вред причинённый работником при выполнении им трудовых обязанностей возмещает работодатель.</span>
+            </p>
+            <p>
+              <b>Результат:</b>
+            <span>Решениями Батыревского районного суда Чувашской Республики ( дело № 2-238/2022 - решение от 19.04.2022, № 2-581/2022 - решение от 09.11.2022, № 2-343/2022 - решение от 07.06.2022) исковые требования удовлетворены: с работодателя в пользу Истцов взысканы:</span>
+            <li>в пользу дочери - компенсация морального вреда в размере 25 000 рублей;</li>
+            <li>в пользу несовершеннолетнего ребёнка - компенсация морального вреда в размере 300 000 рублей, в счет возмещения вреда по потере кормильца денежные средства в сумме 193226 руб. 65 коп., начиная с ДД.ММ.ГГГГ ежемесячно в счет возмещения вреда по потере кормильца денежные средства в сумме 8160 рублей 57 коп. с последующей индексацией в установленном законом порядке до его совершеннолетия;</li>
+            <li>в пользу жены - компенсация морального вреда в размере 400 000 рублей.</li>
+            <span>На сегодняшний день, принятые судебные акты вступили в законную силу.</span>
+            </p> 
+        </div>
+    </div>
+    </div>
+        </div>
+</div>
+
+
+
+    <div class="reviews container-fluid">
+      <a class="brand-review" target="_blank" href="https://yandex.ru/maps/org/lider_prava/34845163518/reviews/?ll=50.123226%2C55.641204&z=7">
+        <img src="img/yandex.svg" alt="Logo" width="80px"></a>
+      <li class="review-title">
+        <p class="rev-arrow-backward">⬅</p>
+        <a class="rev-text" id="rev-text">ЧИТАЙТЕ ОТЗЫВЫ О НАС</a>
+        <p class="rev-arrow-forward">⮕</p>
+      </li>
+          <a class="brand-review" target="_blank" href="https://2gis.ru/cheboksary/firm/70000001053905641/tab/reviews">
+            <img src="img/2gis.svg" alt="Logo" width="100px"></a>
+    </div> 
+
+
+      <!-- СВЯЗАТЬСЯ С НАМИ -->
+
+      <div class="our-contacts" id="our-contacts">
+        <h1 class="cont-title" id="cont-title">НАШИ КОНТАКТЫ</h1>
+        <div class="contact-block container-fluid">
+     <div class="contact-map wow fadeIn" data-wow-duration="2.5s">
+      <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/lider_prava/34845163518/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Лидер Права</a><a href="https://yandex.ru/maps/45/cheboksary/category/legal_services/184105630/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Юридические услуги в Чебоксарах</a><a href="https://yandex.ru/maps/45/cheboksary/category/attorney/184105616/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Адвокаты в Чебоксарах</a><iframe src="https://yandex.ru/map-widget/v1/org/lider_prava/34845163518/?from=mapframe&ll=50.123226%2C55.641204&z=6" width="500" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+      </div>
+  </div>
+      <div class="contacts wow fadeIn" data-wow-duration="2.5s" id="contacts">
+<a class="cont-item" target="_blank" href="https://yandex.ru/maps/org/lider_prava/34845163518/?from=mapframe&ll=50.123226%2C55.641204&z=7">
+ <img class="cont-icons" src="img\geo-env.svg" alt="icon" width="20px">
+<span class="txt">428003, Чувашская Республика, г. Чебоксары, ул. Афанасьева, д. 2, оф. 56.</span>
+</a>
+<a class="cont-item" target="_blank" href="tel:+7 961 346 70 77">
+  <img class="cont-icons" src="img\call-env.svg" alt="icon" width="20px">
+<span class="txt">+7 961 346 70 77</span>
+</a>
+<a class="cont-item" target="_blank" href="mailto:liderprava21@ya.ru">
+  <img class="cont-icons" src="img\mail-env.svg" alt="icon" width="20px">
+<span class="txt">liderprava21@ya.ru</span>
+</a>
+<a class="cont-item">
+  <img class="cont-icons" src="img\clock-solid.svg" alt="icon" width="20px">
+<span class="txt">Время работы: Будни с 9:00-18:00</span>
+</a>
+<a class="cont-item" target="_blank" href="https://www.rusprofile.ru/ip/319213000057662">
+  <img class="cont-icons" src="img\lic-env.svg" alt="icon" width="20px">
+<span class="txt">ИП Артемьев Артём Сергеевич</span>
+</a>
+</div>
+<div class="form-container wow fadeIn" data-wow-duration="2.5s" id="form-container">
+      <form id = "sendform" class="form" action="/form" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="text" name="name" id="sendname" class="text" maxlength="50" placeholder="Имя">
+        <input type="tel" name="number" id="sendnumber" class="text" 
+        pattern="^\+7\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$" 
+        placeholder="Телефон" required>
+        <input type="email" name="email" id="sendemail" class="text" maxlength="50" placeholder="E-mail">
+        <input type="text" name="username" style="display: none" tabindex="-1" autocomplete="off">
+        <select type="text" name="theme" id="sendtheme" class="text" placeholder="Выберите тему обращения">
+          <option value="--Выберите тему обращения--">--Выберите тему обращения--</option>
+          <option value="Записаться на приём">Записаться на приём</option>
+          <option value="Юридическая консультация">Юридическая консультация</option>
+          <option value="Сопровождение сделки">Сопровождение сделки</option>
+          <option value="Оформление претензии">Оформление претензии</option>
+          <option value="Представительство в суде">Представительство в суде</option>
+          <option value="Услуги адвоката">Другое</option>
+        </select>
+        <textarea type="text" name="details" id="senddetails" class="details" maxlength="1000" placeholder="Опишите вашу ситуацию"></textarea>
+        <div class="info">
+        <label for="info">Дополнительная информация</label>
+        <input type="text" id="info" name="info">
+        </div> 
+        <li class="policy" id="policy">Нажимая кнопку, я подтверждаю, что ознакомлен(а) и принимаю условия <a class="conf-pol" target="_blank" href="pages/confidence.html">Политики Конфиденциальности</a> и соглашаюсь на <a class="conf-pol" target="_blank" href="pages/agreement.html">обработку персональных данных</a></li>       
+        <button type="submit" name="submit" class ="submit" id="sendsubmit" onclick="sendForm" value="send" >ОТПРАВИТЬ ЗАЯВКУ</button>
+        </form>
+  <div id="popup-page" class="popup-page">
+    <div id="popuphtml" class="popuphtml">
+        <h3 class="popupmsgone">Ваша заявка успешно отправлена!</h3>
+        <p class="checkmark">&#x2713</p>
+        <p class="popupmsgtwo">Мы свяжемся с вами в ближайшее время.</p>
+        <button class="btnpop" onclick="hidePopup()">OK</button>
+    </div>
+</div>
+  </div>
+
+</div>
+
+</div>
+
+<div id="privacyModal" class="notify hidden ">
+  <div class="notify-content">
+      <div class="text-btns">
+      <p class="poltext">Вы используете сайт на условиях Соглашения об обработке персональных данных и Политики Конфиденциальности.</p>
+      <div class="notify-btns">
+      <a class="acceptbutton" id="acceptButton">ОК</a>
+      <a class="privpolicy" id="privpolicy" target="_blank" href="pages/agreement.html">Соглашение</a>
+  </div>
+  </div>
+  <div class="notify-close">&times;</div>
+  </div>
+</div>
+
+
+ <!-- НИЖНЯЯ ПАНЕЛЬ С ССЫЛКАМИ -->
+
+ <footer>
+  <div class="bottom-panel container-fluid">
+      <div class="panel-content">
+          <div class="bottom-name" id="bottom-name">ЛИДЕР ПРАВА</div>  
+          <div class="bottom-items container-fluid">
+            <a class="bottom-link" target="_blank" href="tel:+7 961 346 70 77">
+              <img src="/img\trubka.svg" width="20px">
+            <span class="bottom-text">+7 961 346 70 77</span>
+          </a>
+          <a class="bottom-link" target="_blank" href="mailto:liderprava21@ya.ru">
+            <img src="/img/post.svg" width="20px">
+            <span class="bottom-text" >liderprava21@ya.ru</span>
+          </a>
+            <a>
+              <img src="/img/watch.svg" width="20px">
+            <span class="bottom-text">Время работы: Будни с 9:00-18:00</span>
+          </a>
+            <a class="bottom-link" target="_blank" href="https://yandex.ru/maps/org/lider_prava/34845163518/?ll=50.123226%2C55.641204&z=7">
+              <img src="/img/loc.svg" width="20px">
+            <span class="bottom-text" >428003, Чувашская Республика, г. Чебоксары, ул. Афанасьева, д. 2, оф. 56.</span>
+          </a>
+            <a class="bottom-link" target="_blank" href="https://www.rusprofile.ru/ip/319213000057662">
+              <img src="/img/badge.svg" width="20px">
+            <span class="bottom-text" >ИП Артемьев Артём Сергеевич ОГРНИП 319213000057662 ИНН 210802556940</span>
+          </a>
+          </div>
+          </div>
+          <div class="bottom-content container">
+          <div class="bottom-icon-down" id="bottom-icon-down">
+            <a class="bottom-icon" target="_blank" href="https://vk.com/liderprava21">
+              <img src="/img/vkito.svg" alt="Logo" width="40px"></a>
+              <a class="bottom-icon" target="_blank" href="https://api.whatsapp.com/send/?phone=79603128406&text=Здравствуйте%21%0A%0AПишу+из+приложения+2ГИС.%0A%0A&type=phone_number&app_absent=0">
+                <img src="/img/whatsappicon.svg" alt="Logo" width="45px"></a>
+              <a class="bottom-icon" target="_blank" href="https://web.telegram.org/k/#@liderprava21">
+                <img src="/img/telegramicon.svg" alt="Logo" width="45px"></a>
+                <a class="bottom-icon" target="_blank" href="https://yandex.ru/maps/org/lider_prava/34845163518/?ll=50.123226%2C55.641204&z=7">
+                  <img src="/img/Yandexicon.svg" alt="Logo" width="45px"></a>
+                  <a class="bottom-icon" target="_blank" href="https://2gis.ru/cheboksary/firm/70000001053905641">
+                    <img src="/img/2gisicon.svg" alt="Logo" width="40px"></a>
+                  </div>
+              <a class="url" href="https://lider-prava.ru">LIDER-PRAVA.RU</a>
+          </div>
+          </div>
+</footer>
+
+<div class="go-top">▲</div>
+<script src="/js/wow.min.js"></script>
+<script> 
+new WOW().init(); 
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/js/mein.js"></script>
+
+</body>
+</html>
