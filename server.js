@@ -41,7 +41,7 @@ app.post("/form", urlencodedParser, function (req, res) {
   // }
 
   const { number } = req.body;
-  const blockedNumbers = ['9685155177', '9005049999']; // Список запрещённых номеров
+  const blockedNumbers = ['0000000000', '0000000000']; // Список запрещённых номеров
 
   // Проверяем, есть ли номер в чёрном списке
   if (blockedNumbers.includes(number)) {
